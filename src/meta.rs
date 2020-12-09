@@ -87,7 +87,7 @@ impl Header {
 
         loop {
             let read = content.read(&mut buf)?;
-            if had_writen && (read == 0 || read < MAX_LENGTH) {
+            if had_writen && read == 0 {
                 break;
             }
 
